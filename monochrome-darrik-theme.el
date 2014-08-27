@@ -1,4 +1,4 @@
-;;; monochrome-theme.el --- A dark Emacs 24 theme for your focused hacking sessions
+;;; monochrome-darrik-theme.el --- A dark Emacs 24 theme for your focused hacking sessions
 
 ;; Copyright (C) 2011-2014 Xavier Noria
 ;;
@@ -6,28 +6,36 @@
 ;;
 ;; Just throw this file into ~/.emacs.d and
 ;;
-;;     M-x load-theme RET monochrome RET
+;;     M-x load-theme RET monochrome-darrik RET
 ;;
 ;; or put in your init file
 ;;
-;;     (load-theme 'monochrome)
+;;     (load-theme 'monochrome-darrik)
 ;;
 ;; This theme is based on the builtin dichromacy theme.
 ;;
 ;; Works with Emacs 24.
 
-(deftheme monochrome
+(deftheme monochrome-darrik
   "Gray on black for your focused hacking sessions.")
 
 (let ((class '((class color) (min-colors 10)))
-      (black "black")
-      (white "white")
-      (lgray "light gray")
-      (dgray "dark gray")
-      (sgray "light slate gray"))
+      (black      "black")
+      (white      "white")
+      (lgray      "light gray")
+      (dgray      "dark gray")
+      (sgray      "light slate gray")
+
+      (snow       "#fffafa")
+      (ghostwhite "#f8f8ff")
+      (whitesmoke "#f5f5f5")
+      (gainsboro  "#dcdcdc")
+      (silver     "#c0c0c0")
+      (dimgray    "#696969")
+      )
 
   (custom-theme-set-faces
-   'monochrome
+   'monochrome-darrik
 
    `(default ((,class (:foreground ,lgray :background ,black))))
    `(cursor ((,class (:background ,lgray))))
@@ -44,7 +52,7 @@
    `(trailing-whitespace ((,class (:background "red"))))
 
    ;; Mode line faces
-   `(mode-line ((t (:background "black" :foreground "black" :box (:line-width -1 :style released-button)))))
+   `(mode-line ((t (:background "black" :foreground "#e5e5e5" :box (:line-width -1 :style released-button)))))
    `(mode-line-inactive ((t (:background "dim gray" :foreground "black" :box (:line-width -1 :style released-button)))))
 
    ;; Whitespace-mode
@@ -149,13 +157,16 @@
    `(eshell-ls-symlink ((,class (:inherit eshell-ls-unreadable))))
 
    ;; Org-mode
-   `(org-level-1 ((t (:bold t :foreground ,lgray :height 1.5))))
-   `(org-level-2 ((t (:bold nil :foreground ,lgray :height 1.2))))
-   `(org-level-3 ((t (:bold t :foreground ,lgray :height 1.0))))
-   `(org-level-4 ((t (:bold nil :foreground ,lgray :height 1.0))))
+   `(org-level-1 ((t (:bold t :foreground ,gainsboro))))
+   `(org-level-2 ((t (:bold nil :foreground ,lgray))))
+   `(org-level-3 ((t (:bold t :foreground ,silver))))
+   `(org-level-4 ((t (:bold nil :foreground ,dimgray))))
    `(org-link ((t (:foreground ,sgray :underline t))))
    `(org-todo ((t (:bold t :foreground "red"))))
    `(org-done ((t (:bold t :foreground "green"))))
+   `(org-table ((t (:bold nil :foreground ,ghostwhite))))
+   `(org-document-title ((t (:bold t :foreground ,whitesmoke))))
+   `(org-date ((t (:bold t :foreground ,sgray))))
 
    ;; helm
    `(helm-header ((t (:foreground ,dgray :background ,black :underline nil :box nil))))
@@ -214,7 +225,7 @@
   '(magit-item-highlight ((t (:weight bold))))
 
   (custom-theme-set-variables
-   'monochrome
+   'monochrome-darrik
    `(ansi-color-names-vector [,black ,lgray ,dgray ,sgray])))
 
 ;; Autoload for MELPA
@@ -224,10 +235,10 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'monochrome)
+(provide-theme 'monochrome-darrik)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; monochrome-theme.el ends here
+;;; monochrome-darrik-theme.el ends here
