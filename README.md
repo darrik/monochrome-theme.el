@@ -1,14 +1,14 @@
-# monochrome - A dark Emacs 24 theme for your focused hacking sessions
+# monochrome-darrik - A dark Emacs 24 theme for your focused hacking sessions
 
 ## Installation
 
-Just throw _monochrome-theme.el_ into _~/.emacs.d_ and execute
+Just throw _monochrome-darrik-theme.el_ into _~/.emacs.d_ and execute
 
-    M-x load-theme RET monochrome RET
+    M-x load-theme RET monochrome-darrik RET
 
 or put in your init file
 
-    (load-theme 'monochrome)
+    (load-theme 'monochrome-darrik)
 
 This theme is based on the builtin dichromacy theme, it is basically
 gray on black, except for errors and a few things.
@@ -17,14 +17,4 @@ Patches welcome!
 
 ## Screenshots
 
-### Source Code
-
-![Monochrome Theme for Emacs 24: Source Code](http://github.com/fxn/monochrome-theme.el/raw/master/monochrome-theme.el.png)
-
-### Speedbar
-
-![Monochrome Theme for Emacs 24: Speedbar](http://github.com/fxn/monochrome-theme.el/raw/master/speedbar.png)
-
-### ido
-
-![Monochrome Theme for Emacs 24: ido](http://github.com/fxn/monochrome-theme.el/raw/master/ido.png)
+To be updated.
